@@ -21,18 +21,18 @@ public class Automovel implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
     private String marca;
     private String modelo;
     private Integer anoFabricacao;
     private Integer anoModelo;
     private String observacoes;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

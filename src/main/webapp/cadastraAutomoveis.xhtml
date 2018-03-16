@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="2">
+                Marca: <h:inputText value="#{automovelBean.automovel.marca}"/>
+                Modelo: <h:inputText value="#{automovelBean.automovel.modelo}"/>
+                Ano de Fabricação: <h:inputText value="#{automovelBean.automovel.anoFabricacao}"/>
+                Ano do Modelo: <h:inputText value="#{automovelBean.automovel.anoModelo}"/>
+                Observação: <h:inputTextarea value="#{automovelBean.automovel.observacoes}"/>
+                
+                <h:commandButton value="Salvar" action="#{automovelBean.salva(automovelBean.automovel)}"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
