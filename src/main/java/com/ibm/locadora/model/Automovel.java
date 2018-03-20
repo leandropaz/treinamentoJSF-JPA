@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -27,6 +28,27 @@ public class Automovel implements Serializable {
     private Integer anoFabricacao;
     private Integer anoModelo;
     private String observacoes;
+    private Double preco;
+    private Double kilometragem;
+
+    public Double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(Double preco) {
+        this.preco = preco;
+    }
+
+    public Double getKilometragem() {
+        return kilometragem;
+    }
+
+    public void setKilometragem(Double kilometragem) {
+        this.kilometragem = kilometragem;
+    }
+    
+    @ManyToOne
+    private Modelo modelo;
 
     public Integer getId() {
         return id;

@@ -9,6 +9,7 @@ import com.ibm.locadora.control.JPAUtil;
 import com.ibm.locadora.model.Automovel;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
+import javax.faces.view.ViewScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
@@ -17,11 +18,13 @@ import javax.persistence.Query;
  * @author Leandro Paz <leandro.paz at ibm.com>
  */
 @ManagedBean
+@ViewScoped
 public class AutomovelBean {
 
     private Automovel automovel = new Automovel();
 
     private List<Automovel> automoveis;
+    private Marca marca;    //utilitario para buscar os modelos
 
     public List<Automovel> getAutomoveis() {
         if (automoveis == null) {
